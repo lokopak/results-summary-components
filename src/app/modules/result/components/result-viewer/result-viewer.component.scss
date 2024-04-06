@@ -1,0 +1,28 @@
+@use "responsive";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+
+  .results-info-container,
+  .result-summary-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .tools {
+    display: flex;
+  }
+
+  @include responsive.mobile-landscape {
+    flex-direction: row;
+
+    .results-info-container {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}

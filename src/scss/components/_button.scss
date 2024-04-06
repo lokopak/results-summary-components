@@ -1,0 +1,26 @@
+@use "variables";
+
+@mixin button {
+  .button {
+    display: inline-block;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    outline: none;
+  }
+
+  .button-primary {
+    background-color: variables.$dack-gray-blue;
+    color: variables.$white;
+    transition: color 100ms ease-in-out;
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        #{variables.$light-slate-blue},
+        #{variables.$light-royal-blue}
+      );
+    }
+  }
+}

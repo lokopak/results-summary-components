@@ -1,0 +1,11 @@
+<div class="results-info-container">
+  <app-result-resume [score]="average"></app-result-resume>
+</div>
+<div class="result-summary-container">
+  <app-result-summary>
+    <app-result *ngFor="let result of results" [result]="result"></app-result>
+  </app-result-summary>
+  <div class="tools">
+    <button type="button" class="button button-primary">Continue</button>
+  </div>
+</div>

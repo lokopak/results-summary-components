@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .result-summary-inner,
+  .result-summary-content {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex: 1;
+  }
+  .result-summary-inner {
+    padding: 1rem 2rem;
+  }
+}

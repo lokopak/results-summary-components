@@ -1,0 +1,152 @@
+@use "variables";
+@use "responsive";
+
+$result-border-radius: 1.5rem;
+
+@mixin page-results {
+  app-results {
+    width: 100%;
+    height: 100%;
+    .container {
+      place-content: center;
+    }
+
+    app-result-viewer {
+      width: 100%;
+
+      @include responsive.table-landscape {
+        width: min(100%, 600px);
+      }
+
+      @include responsive.breakpoint-md {
+        width: min(100%, 600px);
+      }
+    }
+
+    .results-info-container {
+      overflow: hidden;
+    }
+
+    .result-resume-inner {
+      padding: 2rem;
+      background: linear-gradient(
+        to bottom,
+        #{variables.$light-slate-blue},
+        #{variables.$light-royal-blue}
+      );
+      color: variables.$light-lavender;
+    }
+
+    .result-summary-container {
+      // padding: 2rem;
+    }
+
+    .result-tittle {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .result-summary-content {
+      justify-content: space-between;
+      // gap: 1rem;
+    }
+
+    .result-resume-summary-title {
+      color: variables.$white;
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+
+    .result-resume-score {
+      padding: 2rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      background: linear-gradient(
+        #{variables.$violet-blue},
+        #{variables.$persian-blue}
+      );
+
+      .score {
+        font-size: 3rem;
+        font-weight: 900;
+        color: variables.$white;
+      }
+    }
+
+    .result {
+      padding: 1rem;
+      border-radius: 0.5rem;
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+
+      .result-value {
+        font-weight: 900;
+      }
+
+      &.reaction {
+        background-color: variables.$light-red-bg;
+        .result-title {
+          color: variables.$light-red;
+        }
+      }
+
+      &.memory {
+        background-color: variables.$orangey-yellow-bg;
+        .result-title {
+          color: variables.$orangey-yellow;
+        }
+      }
+
+      &.verbal {
+        background-color: variables.$geen-teal-bg;
+        .result-title {
+          color: variables.$geen-teal;
+        }
+      }
+
+      &.visual {
+        background-color: variables.$cobalt-blue-bg;
+        .result-title {
+          color: variables.$cobalt-blue;
+        }
+      }
+    }
+
+    @include responsive.mobile-portrait {
+      .results-info-container {
+        border-bottom-right-radius: $result-border-radius;
+        border-bottom-left-radius: $result-border-radius;
+        height: 40%;
+      }
+      .result-summary-container {
+        height: 60%;
+        overflow: hidden;
+      }
+    }
+
+    @include responsive.mobile-landscape {
+      .results-info-container {
+        border-top-right-radius: $result-border-radius;
+        border-bottom-right-radius: $result-border-radius;
+        width: 50%;
+        height: 100%;
+      }
+      .result-summary-container {
+        height: 100%;
+        width: 50%;
+      }
+    }
+
+    .tools {
+      padding: 0 2rem;
+      margin: 1rem 0;
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}

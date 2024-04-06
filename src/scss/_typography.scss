@@ -1,0 +1,8 @@
+@use "variables";
+
+body {
+  font-family: variables.$font-family;
+  font-optical-sizing: auto;
+  font-weight: variables.$font-weight;
+  font-style: normal;
+}

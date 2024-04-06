@@ -1,0 +1,19 @@
+:host {
+  display: block;
+
+  .result-inner {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .result-icon {
+    margin-right: 1rem;
+  }
+
+  .result-content {
+    margin-left: auto;
+  }
+}

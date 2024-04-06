@@ -1,0 +1,41 @@
+@mixin mobile-portrait {
+  @media screen and (max-width: 599.98px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media screen and (max-width: 959.98px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin table-portrait {
+  @media screen and (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin table-landscape {
+  @media screen and (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg {
+  @media screen and (min-width: 1280px) and (max-width: 1919.98px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}

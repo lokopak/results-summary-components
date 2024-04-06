@@ -1,0 +1,19 @@
+@use "responsive";
+
+app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  flex-direction: row;
+  height: 100%;
+
+  @include responsive.mobile-portrait {
+    flex-direction: column;
+  }
+}

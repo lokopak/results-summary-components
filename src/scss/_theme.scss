@@ -1,0 +1,24 @@
+@forward "typography";
+@forward "colors";
+@use "pages/results";
+@use "components/button";
+@use "components/icon";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+@mixin theme {
+  @include button.button;
+  @include icon.icon;
+  @include results.page-results;
+}
+
+@include theme;
