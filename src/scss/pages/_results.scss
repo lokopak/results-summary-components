@@ -14,7 +14,7 @@ $result-border-radius: 1.5rem;
     app-result-viewer {
       width: 100%;
 
-      @include responsive.table-landscape {
+      @include responsive.tablet-landscape {
         width: min(100%, 600px);
       }
 
@@ -37,10 +37,6 @@ $result-border-radius: 1.5rem;
       color: variables.$light-lavender;
     }
 
-    .result-summary-container {
-      // padding: 2rem;
-    }
-
     .result-tittle {
       font-size: 1.2rem;
       font-weight: 600;
@@ -48,8 +44,7 @@ $result-border-radius: 1.5rem;
     }
 
     .result-summary-content {
-      justify-content: space-between;
-      // gap: 1rem;
+      gap: 1rem;
     }
 
     .result-resume-summary-title {
@@ -76,8 +71,11 @@ $result-border-radius: 1.5rem;
     }
 
     .result {
-      padding: 1rem;
-      border-radius: 0.5rem;
+      padding: 1.5rem;
+      @include responsive.handset-landscape {
+        padding: 1rem;
+      }
+      border-radius: 10px;
 
       .icon {
         margin-right: 0.5rem;
@@ -116,7 +114,7 @@ $result-border-radius: 1.5rem;
       }
     }
 
-    @include responsive.mobile-portrait {
+    @include responsive.handset-portrait {
       .results-info-container {
         border-bottom-right-radius: $result-border-radius;
         border-bottom-left-radius: $result-border-radius;
@@ -128,7 +126,40 @@ $result-border-radius: 1.5rem;
       }
     }
 
-    @include responsive.mobile-landscape {
+    @include responsive.tablet-portrait {
+      .results-info-container {
+        border-top-right-radius: $result-border-radius;
+        border-bottom-right-radius: $result-border-radius;
+      }
+    }
+    @include responsive.breakpoint-md {
+      .results-info-container {
+        border-top-right-radius: $result-border-radius;
+        border-bottom-right-radius: $result-border-radius;
+      }
+    }
+
+    @include responsive.media-web {
+      .results-info-container {
+        border-radius: $result-border-radius;
+      }
+    }
+
+    @include responsive.breakpoint-sm {
+      margin: auto;
+      height: min(100%, 512px);
+      .results-info-container {
+        border-top-right-radius: $result-border-radius;
+        border-bottom-right-radius: $result-border-radius;
+      }
+    }
+
+    @include responsive.breakpoint-md {
+      height: min(100%, 512px);
+      border-radius: $result-border-radius;
+    }
+
+    @include responsive.handset-landscape {
       .results-info-container {
         border-top-right-radius: $result-border-radius;
         border-bottom-right-radius: $result-border-radius;
@@ -142,8 +173,8 @@ $result-border-radius: 1.5rem;
     }
 
     .tools {
-      padding: 0 2rem;
-      margin: 1rem 0;
+      padding: 1rem 2rem;
+      margin: 0;
       .button {
         width: 100%;
       }

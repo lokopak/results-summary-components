@@ -13,7 +13,7 @@ app-layout {
   flex-direction: row;
   height: 100%;
 
-  @include responsive.mobile-portrait {
+  @include responsive.handset-portrait {
     flex-direction: column;
   }
 }

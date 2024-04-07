@@ -59,7 +59,7 @@ $dack-gray-blue: hsl(224, 30%, 27%);
 // Body Copy
 
 // - Font size (paragraphs): 18px
-$font-size: 18px;
+$font-size: calc(clamp(0.875rem, 0.256vw + 0.817rem, 1.125rem));
 
 // Font
 // - Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)

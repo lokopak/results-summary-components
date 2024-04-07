@@ -2,9 +2,12 @@
 
 :host {
   display: flex;
-  flex-direction: column;
   box-sizing: border-box;
+  flex-direction: row;
+  width: 100%;
   height: 100%;
+  margin: auto;
+  overflow: hidden;
 
   .results-info-container,
   .result-summary-container {
@@ -13,16 +16,42 @@
     overflow: hidden;
   }
 
+  .result-summary-container,
+  .results-info-container {
+    width: 100%;
+  }
+
   .tools {
     display: flex;
   }
 
-  @include responsive.mobile-landscape {
-    flex-direction: row;
+  @include responsive.breakpoint-xs {
+    flex-direction: column;
 
     .results-info-container {
-      width: 50%;
-      height: 100%;
+      height: 40%;
+      width: 100%;
     }
+  }
+
+  @include responsive.tablet-portrait {
+    width: 100%;
+    height: min(100%, 512px);
+  }
+
+  @include responsive.media-web {
+    width: min(100%, 768px);
+    height: min(100%, 512px);
+  }
+
+  @include responsive.breakpoint-sm {
+    margin: auto;
+    width: min(100%, 768px);
+    height: min(100%, 512px);
+  }
+
+  @include responsive.breakpoint-md {
+    margin: auto;
+    height: min(100%, 512px);
   }
 }

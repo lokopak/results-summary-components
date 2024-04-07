@@ -1,29 +1,48 @@
-@mixin mobile-portrait {
+@mixin handset-portrait {
   @media screen and (max-width: 599.98px) and (orientation: portrait) {
     @content;
   }
 }
 
-@mixin mobile-landscape {
+@mixin handset-landscape {
   @media screen and (max-width: 959.98px) and (orientation: landscape) {
     @content;
   }
 }
 
-@mixin table-portrait {
+@mixin tablet-portrait {
   @media screen and (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait) {
     @content;
   }
 }
 
-@mixin table-landscape {
+@mixin tablet-landscape {
   @media screen and (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape) {
     @content;
   }
 }
 
+@mixin media-web {
+  @media screen and (min-width: 840px) and (orientation: portrait),
+    (min-width: 1280px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xs {
+  @media screen and (max-width: 599.98px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm {
+  @media screen and (min-width: 600px) and (max-width: 959.98px) {
+    @content;
+  }
+}
+
 @mixin breakpoint-md {
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 960px) and (max-width: 1279.98px) {
     @content;
   }
 }
